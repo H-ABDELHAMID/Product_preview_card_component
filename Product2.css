@@ -1,0 +1,116 @@
+:root{
+    /* Primary */
+
+--Primary1: hsl(158, 36%, 37%);
+--Primary2:  hsl(30, 38%, 92%);
+
+    /* Neutral */
+
+--Neutral1:  hsl(212, 21%, 14%);
+--Neutral2: hsl(228, 12%, 48%);
+--Neutral3: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--Primary2);
+    font-size: 14px;
+}
+
+.card{
+    display: flex;
+    margin: auto;
+    margin-top: 90px;
+    background-color: var(--Neutral3);
+    width: min(600px,80vw);
+    border-radius: 10px;
+}
+
+.card #deskimg{
+    flex: 1 1 50%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-width: 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.card #mobimg{
+    display: none;
+}
+.description{
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 25px 30px;
+}
+.description h5 , .description p {
+    color: var(--Neutral2);
+    font-family: Montserrat;
+}
+.description h5{
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+.description > h3{
+    font-family: Fraunces;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.description #price{
+    color: var(--Primary1);
+    font-family: Fraunces;
+    font-weight: bolder;
+    font-size: 25px;        
+
+}
+.description #old_price{
+    color: var(--Neutral2);
+    align-self: center;
+    text-decoration: line-through;
+    font-size: small;
+    margin-left: 20px;
+}
+.description button{
+    background-color: var(--Primary1);
+    color: var(--Neutral3);
+    border-radius: 10px;
+    height: 40px;
+    font-family: Montserrat;
+    font-weight: bold;
+    height: 50px;
+    border: none;
+}
+.description button:hover{
+    background-color: hsl(158, 74%, 10%);;
+}
+.price{
+    display: flex; 
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 550px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 150px;
+    }
+
+    .card #deskimg{
+        display: none;
+    }
+    .card #mobimg{
+        display: block;
+        flex: 1 1 50%;
+        border-radius: 10px;
+        object-fit: cover;
+        max-width: 100%;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

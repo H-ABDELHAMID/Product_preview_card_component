@@ -1,0 +1,49 @@
+:root{
+    /* Primary */
+
+--Primary1: hsl(158, 36%, 37%);
+--Primary2:  hsl(30, 38%, 92%);
+
+    /* Neutral */
+
+--Neutral1:  hsl(212, 21%, 14%);
+--Neutral2: hsl(228, 12%, 48%);
+--Neutral3: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--Primary2);
+}
+.card{
+    max-width: 400px;  /* not working */ 
+    display: flex;
+    margin: auto;
+    margin-top: 150px; /* any other solution */
+    background-color: var(--Neutral3);
+    border-radius: 10px;  /*3lach border radius matbedlatch 7ta f l'img*/
+}
+.card > img{
+    flex-basis: 175px;
+    max-width: 50%;
+    /* border-radius: 10px; */   
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-content: flex-start;
+   
+
+}
+.description h5 , .description p {
+    color: var(--Neutral2);
+}
+.description #price{
+    color: var(--Primary1);
+}
+.description #old_price{
+    color: var(--Neutral2);
+}
+.description button{
+    background-color: var(--Primary1);
+}
+
